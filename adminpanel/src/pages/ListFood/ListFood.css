@@ -1,0 +1,24 @@
+/* Delete buton tasarımı */
+.delete-btn {
+  background: linear-gradient(135deg, #ff4d4d, #d93636);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete-btn i {
+  font-size: 16px;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #ff6666, #e60000);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+}
