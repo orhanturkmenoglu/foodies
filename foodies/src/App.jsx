@@ -1,9 +1,9 @@
 import React from "react";
 import { Menubar } from "./components/Menubar/Menubar";
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom"; // react-router-dom olmalı
 import { Home } from "./pages/Home/Home";
-import ContactUs from "./pages/Contact Us/ContactUs";
-import { Explore } from "./pages/ExploreFood/ExploreFood";
+import { Contact } from "./pages/Contact/Contact";
+import { ExploreFood } from "./pages/ExploreFood/ExploreFood";
 
 const App = () => {
   return (
@@ -11,8 +11,8 @@ const App = () => {
       <Menubar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/explore" element={<Explore />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/explore" element={<ExploreFood />} />
       </Routes>
     </div>
   );

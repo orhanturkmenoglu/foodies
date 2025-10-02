@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Menubar.css";
 import { assets } from '../../assets/assets';
+import { Link } from 'react-router-dom';
 
 export const Menubar = () => {
   return (
@@ -26,13 +27,13 @@ export const Menubar = () => {
           {/* Sol Menü */}
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
             <li className="nav-item">
-              <a className="nav-link active" href="#">Home</a>
+              <Link to={"/"} className="nav-link active" href="#">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Explore</a>
+              <Link className="nav-link" to={"/explore"}>Explore</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contact Us</a>
+              <Link className="nav-link" to={"/contact"}>Contact Us</Link>
             </li>
           </ul>
 
