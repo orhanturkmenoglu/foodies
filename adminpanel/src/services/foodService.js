@@ -31,7 +31,7 @@ export const getFoodList = async () => {
 export const deleteFood = async (foodId) => {
   try {
     const response = await axios.delete(API_URL + "/" + foodId);
-    return response.status == 201;
+    return response.status == 204;
   } catch (error) {
     console.log("Error while deleting the food.",error);
   }
