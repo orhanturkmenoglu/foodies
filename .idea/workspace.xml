@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="react foodies projesi silindi" />
+    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="react foodies projesi eklendi">
+      <change beforePath="$PROJECT_DIR$/foodis-api/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/FoodisApiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/AwsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/FoodController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/entity/FoodEntity$FoodEntityBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/entity/FoodEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/io/FoodRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/io/FoodResponse$FoodResponseBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/io/FoodResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/repository/FoodRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/FoodService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/FoodServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/test-classes/com/example/foodis/api/FoodisApiApplicationTests.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +79,7 @@
       <updated>1759425369161</updated>
       <workItem from="1759425376650" duration="347000" />
       <workItem from="1759425816307" duration="217000" />
+      <workItem from="1759426091860" duration="1072000" />
     </task>
     <task id="LOCAL-00001" summary="react foodies projesi eklendi">
       <option name="closed" value="true" />
@@ -81,15 +97,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759425839180</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="react foodies projesi eklendi">
+      <option name="closed" value="true" />
+      <created>1759426215512</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1759426215512</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="react foodies projesi eklendi" />
     <MESSAGE value="react foodies projesi silindi" />
-    <option name="LAST_COMMIT_MESSAGE" value="react foodies projesi silindi" />
+    <MESSAGE value="react foodies projesi eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="react foodies projesi eklendi" />
   </component>
 </project>
