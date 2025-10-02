@@ -37,7 +37,7 @@ export const Menubar = () => {
           </ul>
 
           {/* Sağ Menü */}
-          <div className="menubar-right d-flex align-items-center gap-3">
+          <div className="d-flex align-items-center gap-4">
             <div className="position-relative">
               <img src={assets.cart} alt="Cart" height={36} width={36} className="cart-icon"/>
               <span className="cart-badge badge rounded-pill">5</span>

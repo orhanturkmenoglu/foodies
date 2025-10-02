@@ -2,11 +2,7 @@
     margin-right: 25px;
 }
 
-.menubar-right {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
+
 /* Genel navbar stil */
 .custom-navbar {
   background: #fff;
