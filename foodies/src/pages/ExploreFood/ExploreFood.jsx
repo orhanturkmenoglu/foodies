@@ -43,7 +43,7 @@ export const ExploreFood = () => {
                     <option value="Biryani">Biryani</option>
                     <option value="Burger">Burger</option>
                     <option value="Cake">Cake</option>
-                    <option value="Ice Creams">Ice Cream</option>
+                    <option value="Ice cream">Ice Cream</option>
                     <option value="Pizza">Pizza</option>
                     <option value="Rolls">Rolls</option>
                     <option value="Salad">Salad</option>

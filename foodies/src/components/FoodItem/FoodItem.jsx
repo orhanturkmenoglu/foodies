@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 export const FoodItem = ({name,description,id,price,imageUrl}) => {
   return (
-    <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+    <Link className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center"
+    to={`/food/${id}`}
+    style={{textDecoration:"none" }}>
       <div
         className="card shadow-sm"
-        style={{ maxWidth: 320, borderRadius: "12px" }}
+        style={{ maxWidth: 320, borderRadius: "12px"}}
       >
         <img
           src={
@@ -40,6 +42,6 @@ export const FoodItem = ({name,description,id,price,imageUrl}) => {
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
