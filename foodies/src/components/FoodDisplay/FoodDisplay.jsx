@@ -2,14 +2,17 @@ import React, { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 import { FoodItem } from "../FoodItem/FoodItem";
 
-export const FoodDisplay = () => {
+export const FoodDisplay = ({ category }) => {
   const { foodList } = useContext(StoreContext);
-
+  const filteredFoods = foodList.filter(
+    (food) => category === "All" || food.category === category
+  );
+  console.log(filteredFoods );
   return (
     <div className="container my-4">
       <div className="row">
-        {foodList && foodList.length > 0 ? (
-          foodList.map((item, index) => (
+        {filteredFoods && filteredFoods.length > 0 ? (
+          filteredFoods.map((item, index) => (
             <FoodItem
               key={index}
               name={item.name}
