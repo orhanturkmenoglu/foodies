@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { FoodDisplay } from "../../components/FoodDisplay/FoodDisplay";
 
 export const ExploreFood = () => {
+  const [category, setCategory] = useState("All");
+  const [searchText, setSearchText] = useState("");
+
   return (
     <>
       <section
@@ -22,7 +25,10 @@ export const ExploreFood = () => {
           {/* Arama Alanı */}
           <div className="row justify-content-center">
             <div className="col-md-8 col-lg-6">
-              <form className="bg-white shadow-sm rounded-4 p-3">
+              <form
+                className="bg-white shadow-sm rounded-4 p-3"
+                onSubmit={(e) => e.preventDefault()}
+              >
                 <div className="d-flex gap-2">
                   {/* Category Select */}
                   <select
@@ -31,6 +37,7 @@ export const ExploreFood = () => {
                       backgroundColor: "#f1f1f1",
                       maxWidth: "150px",
                     }}
+                    onChange={(e)=>setCategory(e.target.value)}
                   >
                     <option value="All">All</option>
                     <option value="Biryani">Biryani</option>
@@ -43,13 +50,15 @@ export const ExploreFood = () => {
                   </select>
 
                   {/* Search Input */}
-                  <input 
+                  <input
                     type="text"
                     className="form-control border-0 bg-light rounded-3"
                     placeholder="Search food..."
                     style={{
                       fontSize: "0.95rem",
                     }}
+                    onChange={(e) => setSearchText(e.target.value)}
+                    value={searchText}
                   />
 
                   {/* Button */}
@@ -79,7 +88,7 @@ export const ExploreFood = () => {
 
       {/* Yemek Kartları */}
       <div className="mt-4">
-        <FoodDisplay />
+        <FoodDisplay category={category} searchText= {searchText} />
       </div>
     </>
   );
