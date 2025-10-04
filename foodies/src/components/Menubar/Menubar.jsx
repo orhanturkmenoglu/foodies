@@ -7,10 +7,10 @@ export const Menubar = () => {
   return (
     <nav className="navbar navbar-expand-lg shadow-sm custom-navbar">
       <div className="container">
-        <a className="navbar-brand d-flex align-items-center" href="#">
+        <Link to={"/"} className="navbar-brand d-flex align-items-center" >
           <img src={assets.logo} height={48} width={48} className="logo me-2" alt="Logo" />
           <span className="brand-name">Foodies</span>
-        </a>
+        </Link>
 
         <button 
           className="navbar-toggler" 
@@ -27,7 +27,7 @@ export const Menubar = () => {
           {/* Sol Menü */}
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
             <li className="nav-item">
-              <Link to={"/"} className="nav-link active" href="#">Home</Link>
+              <Link to={"/"} className="nav-link active">Home</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to={"/explore"}>Explore</Link>
