@@ -39,10 +39,12 @@ export const Menubar = () => {
 
           {/* Sağ Menü */}
           <div className="d-flex align-items-center gap-4">
-            <div className="position-relative">
+            <Link to={"/cart"}>
+             <div className="position-relative">
               <img src={assets.cart} alt="Cart" height={36} width={36} className="cart-icon"/>
               <span className="cart-badge badge rounded-pill">5</span>
             </div>
+            </Link>
             <button className="btn btn-primary px-3">Login</button>
             <button className="btn btn-success px-3">Register</button>
           </div>
