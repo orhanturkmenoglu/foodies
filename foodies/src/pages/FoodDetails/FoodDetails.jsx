@@ -14,7 +14,7 @@ export const FoodDetails = () => {
         const foodData = await fetchFoodDetails(id);
         setData(foodData);
       } catch (error) {
-        toast.error("❌ Failed to load food details.", error);
+        toast.error("❌ Failed to load food details.");
       } finally {
         setLoading(false);
       }
@@ -25,7 +25,7 @@ export const FoodDetails = () => {
   if (loading) {
     return (
       <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
-        <div className="spinner-border text-warning" role="status">
+        <div className="spinner-border text-primary" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
       </div>
@@ -44,28 +44,31 @@ export const FoodDetails = () => {
     <section
       className="py-5"
       style={{
-        background: "linear-gradient(135deg, #fffaf0, #fefcf8)",
+        background: "linear-gradient(135deg, #fafaf9, #ffffff)",
       }}
     >
       <div className="container px-4 px-lg-5 my-5">
         <div
-          className="row gx-5 align-items-center shadow-lg rounded-5 bg-white p-4 p-lg-5"
+          className="row gx-5 align-items-center shadow-lg rounded-4 bg-white p-4 p-lg-5"
           style={{
+            border: "1px solid #eee",
             transition: "all 0.3s ease",
-            border: "1px solid #f1f1f1",
           }}
         >
-          {/* Left Image */}
-          <div className="col-md-6 text-center mb-4 mb-md-0">
-            <div className="position-relative overflow-hidden rounded-5 shadow-sm">
+          {/* 🖼️ Left Image */}
+          <div className="col-md-6 mb-4 mb-md-0 text-center">
+            <div className="position-relative overflow-hidden rounded-4 shadow-sm">
               <img
-                className="img-fluid rounded-5"
-                src={data?.imageUrl}
+                src={
+                  data?.imageUrl ||
+                  "https://images.unsplash.com/photo-1542291026-7eec264c27ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+                }
                 alt={data?.name || "Food"}
+                className="img-fluid rounded-4"
                 style={{
+                  width: "100%",
                   maxHeight: "440px",
                   objectFit: "cover",
-                  width: "100%",
                   transition: "transform 0.4s ease",
                 }}
                 onMouseOver={(e) =>
@@ -78,44 +81,43 @@ export const FoodDetails = () => {
             </div>
           </div>
 
-          {/* Right Content */}
+          {/* 🧾 Right Content */}
           <div className="col-md-6">
-            {/* Category Tag */}
+            {/* Category Badge */}
             <div className="mb-3">
               <span
-                className="px-4 py-2 rounded-pill fw-semibold shadow-sm d-inline-flex align-items-center"
+                className="px-3 py-2 rounded-pill text-dark fw-semibold shadow-sm small"
                 style={{
                   background: "linear-gradient(135deg, #FFD54F, #FFB300)",
-                  color: "#212529",
-                  fontSize: "0.9rem",
-                  letterSpacing: "0.5px",
                   boxShadow: "0 2px 8px rgba(255, 193, 7, 0.3)",
                 }}
               >
-                <i
-                  className="bi bi-tag-fill me-2"
-                  style={{ color: "#795548", fontSize: "1rem" }}
-                ></i>
-                <span>
-                  Category:{" "}
-                  <strong className="text-dark ms-1">{data?.category}</strong>
-                </span>
+                <i className="bi bi-tag-fill me-2 text-secondary"></i>
+                {data?.category || "General"}
               </span>
             </div>
 
             {/* Title */}
-            <h1 className="display-6 fw-bold mb-3 text-dark">{data?.name}</h1>
+            <h2 className="fw-bold mb-3 text-dark">{data?.name}</h2>
+
+            {/* Rating */}
+            <div className="d-flex align-items-center mb-3 text-warning">
+              {[...Array(4)].map((_, i) => (
+                <i key={i} className="bi bi-star-fill me-1"></i>
+              ))}
+              <i className="bi bi-star-half me-2"></i>
+              <span className="text-muted small">(4.5 / 5)</span>
+            </div>
 
             {/* Price */}
-            <div className="fs-4 mb-4">
-              <span className="text-muted text-decoration-line-through me-2">
-                ${Math.floor(data?.price+10)}
+            <div className="mb-4">
+              <span className="fs-5 text-muted text-decoration-line-through me-2">
+                ${Math.floor(data?.price + 10)}
               </span>
               <span
-                className="fw-bold"
+                className="fw-bold fs-3"
                 style={{
                   color: "#28a745",
-                  fontSize: "1.8rem",
                   textShadow: "0 0 4px rgba(0,0,0,0.1)",
                 }}
               >
@@ -128,22 +130,39 @@ export const FoodDetails = () => {
               className="text-secondary mb-4"
               style={{ lineHeight: "1.7", fontSize: "1.05rem" }}
             >
-              {data?.description}
+              {data?.description ||
+                "A delightful meal prepared with fresh ingredients and bursting with flavor."}
             </p>
 
-            {/* Actions */}
-            <div className="d-flex align-items-center">
-              <input
-                className="form-control text-center me-3 rounded-pill border-secondary"
-                id="inputQuantity"
-                type="number"
-                defaultValue={1}
-                min={1}
-                style={{ maxWidth: "4rem" }}
-              />
+            {/* Quantity + Add to Cart */}
+            <div className="d-flex align-items-center gap-3">
+              <div className="d-flex align-items-center border rounded-pill px-2 py-1 shadow-sm">
+                <button
+                  className="btn btn-outline-secondary btn-sm rounded-circle"
+                  style={{ width: 32, height: 32 }}
+                >
+                  <i className="bi bi-dash-lg"></i>
+                </button>
+                <input
+                  type="number"
+                  defaultValue={1}
+                  min={1}
+                  className="form-control border-0 text-center fw-bold"
+                  style={{
+                    width: "3rem",
+                    boxShadow: "none",
+                  }}
+                />
+                <button
+                  className="btn btn-success btn-sm rounded-circle"
+                  style={{ width: 32, height: 32 }}
+                >
+                  <i className="bi bi-plus-lg"></i>
+                </button>
+              </div>
+
               <button
-                className="btn btn-lg rounded-pill px-4 shadow-sm text-white fw-semibold"
-                type="button"
+                className="btn btn-lg rounded-pill px-4 fw-semibold text-white shadow-sm"
                 style={{
                   background: "linear-gradient(135deg, #ff9900, #ff6600)",
                   border: "none",
@@ -158,8 +177,7 @@ export const FoodDetails = () => {
                     "linear-gradient(135deg, #ff9900, #ff6600)")
                 }
               >
-                <i className="bi bi-cart-fill me-2"></i>
-                Add to Cart
+                <i className="bi bi-cart-plus me-2"></i> Add to Cart
               </button>
             </div>
           </div>
