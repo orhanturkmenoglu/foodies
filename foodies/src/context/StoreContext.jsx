@@ -19,6 +19,14 @@ export const StoreContextProvider = (props) => {
     }));
   };
 
+  const removeFromCart = (foodId) => {
+    setQuantities((prevQuantities)=>{
+      const updateQuantities = {...prevQuantities};
+      delete updateQuantities [foodId];
+      return updateQuantities;
+    })
+  }
+
   useEffect(() => {
     async function loadData() {
       const data = await fetchFoodList();
@@ -31,7 +39,8 @@ export const StoreContextProvider = (props) => {
     foodList,
     increaseQty,
     decreaseQty,
-    quantities
+    quantities,
+    removeFromCart
   };
 
   return (
