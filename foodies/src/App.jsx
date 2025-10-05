@@ -6,6 +6,7 @@ import { Contact } from "./pages/Contact/Contact";
 import { ExploreFood } from "./pages/ExploreFood/ExploreFood";
 import { FoodDetails } from "./pages/FoodDetails/FoodDetails.jsx";
 import { Cart } from "./pages/Cart/Cart.jsx";
+import { PlaceOrder } from "./pages/PlaceOrder/PlaceOrder.jsx";
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/explore" element={<ExploreFood />} />
         <Route path="/food/:id" element ={<FoodDetails/>}/>
-        <Route path="/cart/" element ={<Cart/>}/>
+        <Route path="/cart" element ={<Cart/>}/>
+        <Route path="/order" element ={<PlaceOrder/>}/>
       </Routes>
     </div>
   );
