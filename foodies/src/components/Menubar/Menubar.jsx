@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import "./Menubar.css";
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 
 export const Menubar = () => {
+  const [active,setActive] = useState("home");
   const {quantities} = useContext (StoreContext); 
   const uniqueItemsInCart= Object.values(quantities).filter(qty=>qty>0).length;
   return (
@@ -30,13 +31,13 @@ export const Menubar = () => {
           {/* Sol Menü */}
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
             <li className="nav-item">
-              <Link to={"/"} className="nav-link active">Home</Link>
+              <Link to={"/"} className={active==="home" ? "nav-link  fw-bold active" : "nav-link"} onClick={()=>setActive("home")}>Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={"/explore"}>Explore</Link>
+              <Link className={active==="explore" ? "nav-link fw-bold active" : "nav-link"} to={"/explore"} onClick={()=>setActive("explore")}>Explore</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={"/contact"}>Contact Us</Link>
+              <Link className={active==="contact-us" ? "nav-link fw-bold active" : "nav-link"} to={"/contact"} onClick={()=>setActive("contact-us")}>Contact Us</Link>
             </li>
           </ul>
 
