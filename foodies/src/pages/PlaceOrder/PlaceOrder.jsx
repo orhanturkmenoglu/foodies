@@ -3,20 +3,20 @@ import "./PlaceOrder.css";
 import { StoreContext } from "../../context/StoreContext";
 
 export const PlaceOrder = () => {
-    const { foodList, increaseQty, decreaseQty, quantities,removeFromCart } =
-        useContext(StoreContext);
-    
-      const cartItems = foodList.filter((food) => quantities[food.id] > 0);
-    
-      const subtotal = cartItems.reduce(
-        (acc, food) => acc + food.price * quantities[food.id],
-        0
-      );
-    
-      const shipping = subtotal === 0 ? 0.0 : 10;
-      const tax = subtotal * 0.1;
-      const total = subtotal + shipping + tax;
-    
+  const { foodList, increaseQty, decreaseQty, quantities, removeFromCart } =
+    useContext(StoreContext);
+
+  const cartItems = foodList.filter((food) => quantities[food.id] > 0);
+
+  const subtotal = cartItems.reduce(
+    (acc, food) => acc + food.price * quantities[food.id],
+    0
+  );
+
+  const shipping = subtotal === 0 ? 0.0 : 10;
+  const tax = subtotal * 0.1;
+  const total = subtotal + shipping + tax;
+
   return (
     <div className="container my-5">
       <div className="text-center mb-5">
@@ -31,26 +31,45 @@ export const PlaceOrder = () => {
         <div className="col-md-4 order-md-2 mb-4">
           <h4 className="d-flex justify-content-between align-items-center mb-3">
             <span className="text-primary">Your Cart</span>
-            <span className="badge badge-primary rounded-pill bg-primary ">{cartItems.length}</span>
+            <span className="badge badge-primary rounded-pill bg-primary ">
+              {cartItems.length}
+            </span>
           </h4>
           <ul className="list-group mb-3">
-            <li className="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 className="my-0">Product 1</h6>
-                <small className="text-muted">Description</small>
-              </div>
-              <span className="text-muted">$12</span>
-            </li>
-            <li className="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 className="my-0">Product 2</h6>
-                <small className="text-muted">Description</small>
-              </div>
-              <span className="text-muted">$8</span>
-            </li>
+            {cartItems.map((item) => (
+              <li
+                key={item.id}
+                className="list-group-item d-flex justify-content-between lh-condensed"
+              >
+                <div>
+                  <h6 className="my-0">{item.name}</h6>
+                  <small className="text-muted">
+                    Qty : {quantities[item.id]}
+                  </small>
+                </div>
+                <span className="text-muted">
+                  &#8377;{item.price * quantities[item.id]}
+                </span>
+              </li>
+            ))}
+
             <li className="list-group-item d-flex justify-content-between">
-              <span>Total (USD)</span>
-              <strong>$20</strong>
+              <span>Shipping</span>
+              <strong>
+                &#8377;{subtotal === 0 ? 0.0 : shipping.toFixed(2)}
+              </strong>
+            </li>
+
+            <li className="list-group-item d-flex justify-content-between">
+              <span>Tax (10%)</span>
+              <strong>&#8377;{tax.toFixed(2)}</strong>
+            </li>
+
+            <li className="list-group-item d-flex justify-content-between border-top mt-2 pt-2">
+              <span className="fw-bold fs-5 text-dark">Total (INR)</span>
+              <strong className="text-success fs-5">
+                &#8377;{total.toFixed(2)}
+              </strong>
             </li>
           </ul>
         </div>
@@ -105,7 +124,11 @@ export const PlaceOrder = () => {
             <div className="row">
               <div className="col-md-5 mb-3">
                 <label htmlFor="country">Country</label>
-                <select className="custom-select d-block w-100" id="country" required>
+                <select
+                  className="custom-select d-block w-100"
+                  id="country"
+                  required
+                >
                   <option value="">Choose...</option>
                   <option>United States</option>
                   <option>Turkey</option>
@@ -117,7 +140,11 @@ export const PlaceOrder = () => {
 
               <div className="col-md-4 mb-3">
                 <label htmlFor="state">State / Province</label>
-                <select className="custom-select d-block w-100" id="state" required>
+                <select
+                  className="custom-select d-block w-100"
+                  id="state"
+                  required
+                >
                   <option value="">Choose...</option>
                   <option>California</option>
                   <option>Istanbul</option>
@@ -141,10 +168,7 @@ export const PlaceOrder = () => {
 
             <hr className="mb-4" />
 
-            <button
-              className="btn btn-primary btn-lg btn-block"
-              type="submit"
-            >
+            <button className="btn btn-primary btn-lg btn-block" type="submit">
               Complete Order
             </button>
           </form>
