@@ -1,13 +1,15 @@
 import React, { useContext, useState } from 'react';
 import "./Menubar.css";
 import { assets } from '../../assets/assets';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 
 export const Menubar = () => {
   const [active,setActive] = useState("home");
   const {quantities} = useContext (StoreContext); 
   const uniqueItemsInCart= Object.values(quantities).filter(qty=>qty>0).length;
+
+  const navigate = useNavigate();
   return (
     <nav className="navbar navbar-expand-lg shadow-sm custom-navbar">
       <div className="container">
@@ -49,8 +51,8 @@ export const Menubar = () => {
               <span className="cart-badge badge rounded-pill">{uniqueItemsInCart}</span>
             </div>
             </Link>
-            <button className="btn btn-primary px-3">Login</button>
-            <button className="btn btn-success px-3">Register</button>
+            <button className="btn btn-primary px-3" onClick={()=>navigate("/login")}>Login</button>
+            <button className="btn btn-success px-3" onClick={()=>navigate("/register")}>Register</button>
           </div>
         </div>
       </div>
