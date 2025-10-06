@@ -1,20 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { fetchFoodDetails } from "../../service/foodService";
 import { toast } from "react-toastify";
+import { StoreContext } from "../../context/StoreContext";
 
 export const FoodDetails = () => {
   const { id } = useParams();
+  const {increaseQty}=useContext(StoreContext);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const navigate = useNavigate();
   useEffect(() => {
     const loadFoodDetails = async () => {
       try {
         const foodData = await fetchFoodDetails(id);
         setData(foodData);
       } catch (error) {
-        toast.error("❌ Failed to load food details.");
+        toast.error("❌ Failed to load food details.",error);
       } finally {
         setLoading(false);
       }
@@ -22,6 +25,11 @@ export const FoodDetails = () => {
     if (id) loadFoodDetails();
   }, [id]);
 
+
+  const addToCart = ()=>{
+    increaseQty(data.id)
+    navigate("/cart");
+  }
   if (loading) {
     return (
       <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
@@ -176,6 +184,7 @@ export const FoodDetails = () => {
                   (e.currentTarget.style.background =
                     "linear-gradient(135deg, #ff9900, #ff6600)")
                 }
+                onClick={addToCart}
               >
                 <i className="bi bi-cart-plus me-2"></i> Add to Cart
               </button>
