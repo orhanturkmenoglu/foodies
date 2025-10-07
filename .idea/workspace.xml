@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="react foodies projesi eklendi">
-      <change beforePath="$PROJECT_DIR$/foodies/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies/src/components/FoodDisplay/FoodDisplay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/src/components/FoodDisplay/FoodDisplay.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/io/AuthenticationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/io/AuthenticationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/io/UserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/io/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/FoodisApiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/AwsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/FoodController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/entity/FoodEntity$FoodEntityBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/entity/FoodEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/io/FoodRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/io/FoodResponse$FoodResponseBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/io/FoodResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/repository/FoodRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/FoodService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/FoodServiceImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +49,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="33WGMIumqah7staz5DcDiVEu2l0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,6 +70,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="foodies" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -69,6 +97,7 @@
       <workItem from="1759425816307" duration="217000" />
       <workItem from="1759426091860" duration="1072000" />
       <workItem from="1759500294609" duration="1300000" />
+      <workItem from="1759823640864" duration="1271000" />
     </task>
     <task id="LOCAL-00001" summary="react foodies projesi eklendi">
       <option name="closed" value="true" />
