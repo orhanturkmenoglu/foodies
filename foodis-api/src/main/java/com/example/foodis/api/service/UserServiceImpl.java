@@ -5,6 +5,7 @@ import com.example.foodis.api.io.UserRequest;
 import com.example.foodis.api.io.UserResponse;
 import com.example.foodis.api.repository.UserRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService{
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public UserResponse registerUser(UserRequest userRequest) {
@@ -23,7 +25,7 @@ public class UserServiceImpl implements UserService{
     private UserEntity convertToEntity(UserRequest userRequest) {
         return UserEntity.builder()
                 .email(userRequest.getEmail())
-                .password(userRequest.getPassword())
+                .password(passwordEncoder.encode(userRequest.getPassword()))
                 .name(userRequest.getName())
                 .build();
     }
