@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="secrity config yapılandırması gerçekleşti">
-      <change afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/service/AppUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/util/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/io/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/io/AuthenticationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/io/AuthenticationResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/io/AuthenticationResponse.class" afterDir="false" />
-    </list>
+    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="jwt token için jwt util yardımcı sınıf oluşturuldu auth login giriş oluşturuldu" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +77,7 @@
       <workItem from="1759425816307" duration="217000" />
       <workItem from="1759426091860" duration="1072000" />
       <workItem from="1759500294609" duration="1300000" />
-      <workItem from="1759823640864" duration="3239000" />
+      <workItem from="1759823640864" duration="3570000" />
     </task>
     <task id="LOCAL-00001" summary="react foodies projesi eklendi">
       <option name="closed" value="true" />
@@ -139,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759826983422</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="jwt token için jwt util yardımcı sınıf oluşturuldu auth login giriş oluşturuldu">
+      <option name="closed" value="true" />
+      <created>1759828320654</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759828320654</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +146,7 @@
     <MESSAGE value="react foodies projesi eklendi" />
     <MESSAGE value="login ve response için user entity repository service controller ve dtolar oluşturuldu" />
     <MESSAGE value="secrity config yapılandırması gerçekleşti" />
-    <option name="LAST_COMMIT_MESSAGE" value="secrity config yapılandırması gerçekleşti" />
+    <MESSAGE value="jwt token için jwt util yardımcı sınıf oluşturuldu auth login giriş oluşturuldu" />
+    <option name="LAST_COMMIT_MESSAGE" value="jwt token için jwt util yardımcı sınıf oluşturuldu auth login giriş oluşturuldu" />
   </component>
 </project>
