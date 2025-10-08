@@ -124,7 +124,7 @@ export const Menubar = () => {
                   aria-expanded="false"
                 ></a>
                 <img
-                  src=""
+                  src={assets.profile}
                   alt=""
                   width={32}
                   height={32}

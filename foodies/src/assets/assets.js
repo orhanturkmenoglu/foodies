@@ -7,10 +7,12 @@ import pizza from "../assets/pizza.png";
 import salad from "../assets/salad.png";
 import rolls from "../assets/spring-rolls.png";
 import cakes from "../assets/strawberry-cake.png";
+import profile from "../assets/user.png";
 
 export const assets = {
   logo,
   cart,
+  profile
 };
 
 export const categories = [
