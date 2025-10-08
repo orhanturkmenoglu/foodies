@@ -30,7 +30,11 @@ public class AuthController {
         ));
 
         final UserDetails userDetails = appUserDetailsService.loadUserByUsername(request.getEmail());
-        final String jwtToken =jwtUtil.generateToken(userDetails);
+        final String jwtToken =jwtUtil.
+
+
+
+                generateToken(userDetails);
 
         return new AuthenticationResponse(request.getEmail(), jwtToken);
     }
