@@ -69,3 +69,8 @@
 .active {
   color: tomato !important;
 }
+
+
+.dropdown-menu {
+  cursor: pointer;
+}
