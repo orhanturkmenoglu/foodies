@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="cart remove ve removeFromCart methodları eklendi giriş yapmış kullanıcının tüm kart detaylarını ve sadece almış olduğu foodId artık silinebilir.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/src/components/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies/src/service/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/src/service/authService.js" afterDir="false" />
-    </list>
+    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="cart remove ve removeFromCart methodları eklendi giriş yapmış kullanıcının tüm kart detaylarını ve sadece almış olduğu foodId artık silinebilir." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
