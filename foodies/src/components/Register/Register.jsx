@@ -17,7 +17,9 @@ export const Register = () => {
 
   const onChangeHandler = (event) =>{
     const name = event.target.name;
+    console.log("Name",name);
     const value = event.target.value;
+    console.log("Value",value);
     setData(data =>({...data,[name]:value}));
   }
 
@@ -29,6 +31,7 @@ export const Register = () => {
         const response = await registerUser(data);
         if(response.status === 201) {
           toast.success("Registration completed.Please login.");
+          navigate("/login")
         }
     }catch (error){
         toast.error("Unable to register.Please try again")
