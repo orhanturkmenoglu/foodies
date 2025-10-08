@@ -6,4 +6,6 @@ import com.example.foodis.api.io.CartResponse;
 public interface CartService {
 
     CartResponse addToCart(CartRequest request);
+
+    CartResponse getCart();
 }

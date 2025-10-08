@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="Jwt util jwt parse için yardımcı methodlar oluşturuldu">
+    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="Jwt authentication filter oluşturuldu her istekte token kontrol edilecek ,cart service oluşturuldu sisteme giriş yapan user artık foodId ile kendine ürün ekliyebilecek , gerekli cart service düzenlemeleri gerçekleştirildi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/filter/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/filter/JwtAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/service/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/CartService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/service/CartServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +86,7 @@
       <workItem from="1759426091860" duration="1072000" />
       <workItem from="1759500294609" duration="1300000" />
       <workItem from="1759823640864" duration="5093000" />
+      <workItem from="1759902872402" duration="922000" />
     </task>
     <task id="LOCAL-00001" summary="react foodies projesi eklendi">
       <option name="closed" value="true" />
@@ -155,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759828730326</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Jwt authentication filter oluşturuldu her istekte token kontrol edilecek ,cart service oluşturuldu sisteme giriş yapan user artık foodId ile kendine ürün ekliyebilecek , gerekli cart service düzenlemeleri gerçekleştirildi">
+      <option name="closed" value="true" />
+      <created>1759903125949</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1759903125949</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +173,7 @@
     <MESSAGE value="secrity config yapılandırması gerçekleşti" />
     <MESSAGE value="jwt token için jwt util yardımcı sınıf oluşturuldu auth login giriş oluşturuldu" />
     <MESSAGE value="Jwt util jwt parse için yardımcı methodlar oluşturuldu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jwt util jwt parse için yardımcı methodlar oluşturuldu" />
+    <MESSAGE value="Jwt authentication filter oluşturuldu her istekte token kontrol edilecek ,cart service oluşturuldu sisteme giriş yapan user artık foodId ile kendine ürün ekliyebilecek , gerekli cart service düzenlemeleri gerçekleştirildi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jwt authentication filter oluşturuldu her istekte token kontrol edilecek ,cart service oluşturuldu sisteme giriş yapan user artık foodId ile kendine ürün ekliyebilecek , gerekli cart service düzenlemeleri gerçekleştirildi" />
   </component>
 </project>
