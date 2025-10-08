@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import "../Register/Register.css"
-import axios from "axios";
 import { toast } from "react-toastify";
 import { registerUser } from "../../service/authService";
 export const Register = () => {
