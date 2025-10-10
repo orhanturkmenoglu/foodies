@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="sipariş için order ve stripe entegrasyonları ve configurasyonlar oluşturuldu.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies/src/pages/PlaceOrder/PlaceOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/src/pages/PlaceOrder/PlaceOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +87,7 @@
       <workItem from="1759500294609" duration="1300000" />
       <workItem from="1759823640864" duration="5093000" />
       <workItem from="1759902872402" duration="3020000" />
-      <workItem from="1760084819739" duration="1070000" />
+      <workItem from="1760084819739" duration="2255000" />
     </task>
     <task id="LOCAL-00001" summary="react foodies projesi eklendi">
       <option name="closed" value="true" />

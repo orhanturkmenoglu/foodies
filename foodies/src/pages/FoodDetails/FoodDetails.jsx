@@ -120,7 +120,7 @@ export const FoodDetails = () => {
             {/* Price */}
             <div className="mb-4">
               <span className="fs-5 text-muted text-decoration-line-through me-2">
-                ${Math.floor(data?.price + 10)}
+                ₺{Math.floor(data?.price + 10)}
               </span>
               <span
                 className="fw-bold fs-3"
@@ -129,7 +129,7 @@ export const FoodDetails = () => {
                   textShadow: "0 0 4px rgba(0,0,0,0.1)",
                 }}
               >
-                ${data?.price}
+                ₺{data?.price}
               </span>
             </div>
 
