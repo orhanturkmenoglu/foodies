@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="cart remove ve removeFromCart methodları eklendi giriş yapmış kullanıcının tüm kart detaylarını ve sadece almış olduğu foodId artık silinebilir." />
+    <list default="true" id="4b8ac323-fdf4-48e1-a544-b67f7778fb23" name="Changes" comment="sipariş için order ve stripe entegrasyonları ve configurasyonlar oluşturuldu.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies/src/pages/PlaceOrder/PlaceOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/foodies/src/pages/PlaceOrder/PlaceOrder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/src/main/java/com/example/foodis/api/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodis-api/target/classes/com/example/foodis/api/controller/OrderController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,6 +93,7 @@
       <workItem from="1759500294609" duration="1300000" />
       <workItem from="1759823640864" duration="5093000" />
       <workItem from="1759902872402" duration="3020000" />
+      <workItem from="1760084819739" duration="1070000" />
     </task>
     <task id="LOCAL-00001" summary="react foodies projesi eklendi">
       <option name="closed" value="true" />
@@ -173,11 +183,30 @@
       <option name="project" value="LOCAL" />
       <updated>1759907394249</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="sipariş için order ve stripe entegrasyonları ve configurasyonlar oluşturuldu.">
+      <option name="closed" value="true" />
+      <created>1760084996752</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1760084996752</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="react foodies projesi silindi" />
@@ -189,6 +218,7 @@
     <MESSAGE value="Jwt authentication filter oluşturuldu her istekte token kontrol edilecek ,cart service oluşturuldu sisteme giriş yapan user artık foodId ile kendine ürün ekliyebilecek , gerekli cart service düzenlemeleri gerçekleştirildi" />
     <MESSAGE value="cart service getCart methodu oluşturuldu kullanıcılar artık kendilerine ait cart detaylarına ulaşabilecek." />
     <MESSAGE value="cart remove ve removeFromCart methodları eklendi giriş yapmış kullanıcının tüm kart detaylarını ve sadece almış olduğu foodId artık silinebilir." />
-    <option name="LAST_COMMIT_MESSAGE" value="cart remove ve removeFromCart methodları eklendi giriş yapmış kullanıcının tüm kart detaylarını ve sadece almış olduğu foodId artık silinebilir." />
+    <MESSAGE value="sipariş için order ve stripe entegrasyonları ve configurasyonlar oluşturuldu." />
+    <option name="LAST_COMMIT_MESSAGE" value="sipariş için order ve stripe entegrasyonları ve configurasyonlar oluşturuldu." />
   </component>
 </project>
