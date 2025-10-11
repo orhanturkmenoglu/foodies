@@ -69,7 +69,7 @@ export const Cart = () => {
                     </div>
                     <div className="col-md-2 text-end">
                       <p className="fw-bold">
-                        ₺{(food.price * quantities[food.id]).toFixed(2)}
+                        ${(food.price * quantities[food.id]).toFixed(2)}
                       </p>
                       <button className="btn btn-sm btn-outline-danger" onClick={()=>removeFromCart(food.id)}>
                         <i className="bi bi-trash"></i>
@@ -94,22 +94,22 @@ export const Cart = () => {
               <h5 className="card-title mb-4">Order Summary</h5>
               <div className="d-flex justify-content-between mb-3">
                 <span>Subtotal</span>
-                <span>₺{subtotal.toFixed(2)}</span>
+                <span>${subtotal.toFixed(2)}</span>
               </div>
               <div className="d-flex justify-content-between mb-3">
                 <span>Shipping</span>
-                <span>₺{subtotal === 0 ? 0.0 : shipping.toFixed(2)}</span>
+                <span>${subtotal === 0 ? 0.0 : shipping.toFixed(2)}</span>
               </div>
 
               <div className="d-flex justify-content-between mb-3">
                 <span>Tax</span>
-                <span>₺{tax.toFixed(2)}</span>
+                <span>${tax.toFixed(2)}</span>
               </div>
               <hr />
               <div className="d-flex justify-content-between mb-4">
                 <strong>Total</strong>
                 <strong>
-                  ₺{subtotal === 0 ? 0.0 : total.toFixed(2)}
+                  ${subtotal === 0 ? 0.0 : total.toFixed(2)}
                 </strong>
               </div>
               <button

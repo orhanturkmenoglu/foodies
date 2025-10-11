@@ -170,22 +170,22 @@ export const PlaceOrder = () => {
                   </small>
                 </div>
                 <span className="text-muted">
-                  ₺{(item.price * quantities[item.id]).toFixed(2)}
+                  ${(item.price * quantities[item.id]).toFixed(2)}
                 </span>
               </li>
             ))}
             <li className="list-group-item d-flex justify-content-between">
               <span>Shipping</span>
-              <strong>₺{subtotal === 0 ? 0.0 : shipping.toFixed(2)}</strong>
+              <strong>${subtotal === 0 ? 0.0 : shipping.toFixed(2)}</strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
               <span>Tax (10%)</span>
-              <strong>₺{tax.toFixed(2)}</strong>
+              <strong>${tax.toFixed(2)}</strong>
             </li>
             <li className="list-group-item d-flex justify-content-between border-top mt-2 pt-2">
               <span className="fw-bold fs-5 text-dark">Total</span>
               <strong className="text-success fs-5">
-                ₺{total.toFixed(2)}
+                ${total.toFixed(2)}
               </strong>
             </li>
           </ul>

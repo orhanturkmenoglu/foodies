@@ -1,76 +1,34 @@
-
-
-
-.logo {
-    margin-right: 25px;
+/* Hover efektleri */
+.brand-hover:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease;
 }
 
-/* Genel navbar stil */
-.custom-navbar {
-  background: #fff;
-  border-radius: 12px;
-  padding: 0.8rem 1.2rem;
-  margin: 10px auto;
-  max-width: 95%;
-  transition: all 0.3s ease-in-out;
+.navbar-nav .nav-hover:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd !important;
+  transition: all 0.2s ease;
 }
 
-.custom-navbar .brand-name {
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #2c3e50;
+.active-link {
+  color: #0d6efd !important;
+  background-color: rgba(13, 110, 253, 0.15);
 }
 
-/* Link stilleri */
-.nav-link {
-  font-weight: 500;
-  color: #555 !important;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: #007bff !important;
-}
-
-/* Cart ikonu */
-.cart-icon {
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.cart-icon:hover {
+.cart-hover:hover {
   transform: scale(1.1);
+  transition: all 0.2s ease;
 }
 
-/* Badge */
-.cart-badge {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background: #ffc107;
-  color: #000;
-  font-size: 0.75rem;
-  padding: 4px 7px;
+.profile-hover:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
 }
 
-/* Butonlar */
-.btn {
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.3s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-
-.active {
-  color: tomato !important;
-}
-
-
-.dropdown-menu li {
+.dropdown {
   cursor: pointer;
+}
+.dropdown-menu .hover-bg:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 6px;
 }

@@ -62,7 +62,7 @@ export default function MyOrders() {
                             : `${item.name} x ${item.quantity}, `
                         )}
                       </td>
-                      <td>₺{order.amount.toFixed(2)}</td>
+                      <td>${order.amount.toFixed(2)}</td>
                       <td>Items: {order.orderedItems.length}</td>
                       <td className="fw-bold text-capitalize">
                         ● {order.orderStatus}

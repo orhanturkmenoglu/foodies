@@ -42,7 +42,7 @@ const ListFood = () => {
         <div className="card-header bg-dark text-white d-flex justify-content-between align-items-center rounded-top-4">
           <h5 className="mb-0">🍔 Food List</h5>
           <span className="badge bg-warning text-dark">
-            Total: {listData.length}
+            Total: {listData.lenght}
           </span>
         </div>
         <div className="table-responsive">

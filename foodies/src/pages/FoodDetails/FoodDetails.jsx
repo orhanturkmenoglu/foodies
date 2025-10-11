@@ -6,9 +6,11 @@ import { StoreContext } from "../../context/StoreContext";
 
 export const FoodDetails = () => {
   const { id } = useParams();
-  const {increaseQty}=useContext(StoreContext);
-  const [data, setData] = useState(null);
+  const { increaseQty,decreaseQty,quantities } = useContext(StoreContext);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -17,7 +19,7 @@ export const FoodDetails = () => {
         const foodData = await fetchFoodDetails(id);
         setData(foodData);
       } catch (error) {
-        toast.error("❌ Failed to load food details.",error);
+        toast.error("❌ Failed to load food details.", error);
       } finally {
         setLoading(false);
       }
@@ -25,11 +27,10 @@ export const FoodDetails = () => {
     if (id) loadFoodDetails();
   }, [id]);
 
-
-  const addToCart = ()=>{
-    increaseQty(data.id)
+  const addToCart = () => {
+    increaseQty(data.id);
     navigate("/cart");
-  }
+  };
   if (loading) {
     return (
       <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
@@ -120,7 +121,7 @@ export const FoodDetails = () => {
             {/* Price */}
             <div className="mb-4">
               <span className="fs-5 text-muted text-decoration-line-through me-2">
-                ₺{Math.floor(data?.price + 10)}
+                ${Math.floor(data?.price + 10)}
               </span>
               <span
                 className="fw-bold fs-3"
@@ -129,7 +130,7 @@ export const FoodDetails = () => {
                   textShadow: "0 0 4px rgba(0,0,0,0.1)",
                 }}
               >
-                ₺{data?.price}
+                ${data?.price}
               </span>
             </div>
 
@@ -148,22 +149,24 @@ export const FoodDetails = () => {
                 <button
                   className="btn btn-outline-secondary btn-sm rounded-circle"
                   style={{ width: 32, height: 32 }}
+                  onClick={() => {
+                    decreaseQty(id);
+                  }}
                 >
                   <i className="bi bi-dash-lg"></i>
                 </button>
                 <input
-                  type="number"
-                  defaultValue={1}
-                  min={1}
-                  className="form-control border-0 text-center fw-bold"
-                  style={{
-                    width: "3rem",
-                    boxShadow: "none",
-                  }}
+                  style={{ maxWidth: "100px" }}
+                  type="text"
+                  className="form-control  form-control-sm text-center quantity-input"
+                  value={quantities[id]}
                 />
                 <button
                   className="btn btn-success btn-sm rounded-circle"
                   style={{ width: 32, height: 32 }}
+                  onClick={() => {
+                    increaseQty(id);
+                  }}
                 >
                   <i className="bi bi-plus-lg"></i>
                 </button>
@@ -187,6 +190,25 @@ export const FoodDetails = () => {
                 onClick={addToCart}
               >
                 <i className="bi bi-cart-plus me-2"></i> Add to Cart
+              </button>
+            </div>
+            <div className="d-flex align-items-center gap-3 mt-4">
+              <button
+                className="btn btn-outline-primary rounded-pill px-4 fw-semibold shadow-sm"
+                onClick={() => navigate("/")}
+                style={{
+                  transition: "all 0.3s ease",
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.backgroundColor = "#0d6efd";
+                  e.currentTarget.style.color = "#fff";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                  e.currentTarget.style.color = "#0d6efd";
+                }}
+              >
+                <i className="bi bi-arrow-left me-2"></i> Back to Menu
               </button>
             </div>
           </div>
