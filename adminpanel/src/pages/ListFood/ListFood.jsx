@@ -42,7 +42,7 @@ const ListFood = () => {
         <div className="card-header bg-dark text-white d-flex justify-content-between align-items-center rounded-top-4">
           <h5 className="mb-0">🍔 Food List</h5>
           <span className="badge bg-warning text-dark">
-            Total: {listData.lenght}
+            Total: {listData.length}
           </span>
         </div>
         <div className="table-responsive">
@@ -92,6 +92,12 @@ const ListFood = () => {
                         onClick={() => removeFood(item.id)}
                       >
                         <i className="bi bi-trash-fill"></i> Delete
+                      </button>
+                       <button
+                        className="delete-btn"
+                        onClick={() => removeFood(item.id)}
+                      >
+                        <i className="bi bi-trash-fill"></i> Update
                       </button>
                     </td>
                   </tr>

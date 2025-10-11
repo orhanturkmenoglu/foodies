@@ -17,7 +17,6 @@ const Orders = () => {
   const updateStatus = async (event, orderId) => {
     const newStatus = event.target.value;
 
-    // Optimistic update (ekran hemen yenilensin)
     setData((prevOrders) =>
       prevOrders.map((order) =>
         order.id === orderId ? { ...order, orderStatus: newStatus } : order
@@ -37,7 +36,6 @@ const Orders = () => {
     } catch (error) {
       console.error("Error updating order status:", error);
       alert("Failed to update order status!");
-      // Hata durumunda eski hali geri yükle
       fetchOrders();
     }
   };
@@ -46,14 +44,32 @@ const Orders = () => {
     fetchOrders();
   }, []);
 
+  const statusColor = (status) => {
+    switch (status) {
+      case "Food Preparing":
+        return "bg-warning text-dark";
+      case "Out for delivery":
+        return "bg-info text-dark";
+      case "Delivered":
+        return "bg-success text-white";
+      default:
+        return "bg-secondary text-white";
+    }
+  };
+
   return (
     <div className="container">
       <div className="py-5 row justify-content-center">
-        <div className="col-11 card shadow-sm p-3">
-          <h4 className="mb-4 text-center fw-bold">All Orders</h4>
+        <div className="col-11 card shadow-lg rounded-4 border-0">
+          <div className="card-header bg-dark text-white rounded-top-4 d-flex justify-content-between align-items-center">
+            <h5 className="mb-0">📦 All Orders</h5>
+            <span className="badge bg-primary px-3 py-2">
+              Total: {data.length}
+            </span>
+          </div>
 
           <div className="table-responsive">
-            <table className="table align-middle">
+            <table className="table table-hover align-middle mb-0">
               <thead className="table-light">
                 <tr>
                   <th>Image</th>
@@ -65,7 +81,7 @@ const Orders = () => {
                 </tr>
               </thead>
               <tbody>
-                {data && data.length > 0 ? (
+                {data.length > 0 ? (
                   data.map((order, index) => (
                     <tr key={order.id || index}>
                       <td>
@@ -74,10 +90,9 @@ const Orders = () => {
                           alt="Order"
                           height={48}
                           width={48}
-                          className="rounded"
+                          className="rounded shadow-sm"
                         />
                       </td>
-
                       <td>
                         {order.orderedItems?.map((item, i) => (
                           <span key={i}>
@@ -86,16 +101,23 @@ const Orders = () => {
                           </span>
                         ))}
                       </td>
-
                       <td>{order.userAddress || "-"}</td>
-                      <td>₺{order.amount?.toFixed(2) || "0.00"}</td>
-                      <td>{order.orderedItems?.length || 0}</td>
-
+                      <td>
+                        <span className="fw-bold text-success">
+                          ₺{order.amount?.toFixed(2) || "0.00"}
+                        </span>
+                      </td>
+                      <td>
+                        <span className="badge bg-secondary">
+                          {order.orderedItems?.length || 0}
+                        </span>
+                      </td>
                       <td>
                         <select
-                          className="form-select"
+                          className={`form-select ${statusColor(order.orderStatus)}`}
                           onChange={(event) => updateStatus(event, order.id)}
                           value={order.orderStatus || "Food Preparing"}
+                          style={{ fontWeight: "600" }}
                         >
                           <option value="Food Preparing">Food Preparing</option>
                           <option value="Out for delivery">Out for delivery</option>
@@ -106,7 +128,8 @@ const Orders = () => {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="6" className="text-center py-4">
+                    <td colSpan="6" className="text-center py-5 text-muted">
+                      <i className="bi bi-emoji-frown fs-3 d-block mb-2"></i>
                       No orders found.
                     </td>
                   </tr>
