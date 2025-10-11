@@ -5,90 +5,70 @@ export const ExploreFood = () => {
   const [category, setCategory] = useState("All");
   const [searchText, setSearchText] = useState("");
 
+  const categories = ["All", "Biryani", "Burger", "Cake", "Ice cream", "Pizza", "Rolls", "Salad"];
+
   return (
     <>
-      <section
-        className="py-5"
-        style={{
-          backgroundColor: "#f8f9fa",
-        }}
-      >
+      <section className="py-5" style={{ backgroundColor: "#fefefe" }}>
         <div className="container">
           {/* Başlık */}
-          <div className="text-center mb-4">
-            <h2 className="fw-bold text-dark mb-2">Explore Foods</h2>
-            <p className="text-secondary">
-              Filter by category or search to find your favorite dishes
+          <div className="text-center mb-5">
+            <h1 className="display-5 fw-bold text-dark mb-3">
+              Explore Delicious Foods
+            </h1>
+            <p className="lead text-muted">
+              Choose a category or search to find your favorite dishes
             </p>
+          </div>
+
+          {/* Kategori Butonları */}
+          <div className="d-flex justify-content-center flex-wrap gap-2 mb-4">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`btn btn-sm fw-semibold ${
+                  category === cat ? "btn-primary" : "btn-outline-secondary"
+                }`}
+                onClick={() => setCategory(cat)}
+                style={{ borderRadius: "50px", minWidth: "100px" }}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
 
           {/* Arama Alanı */}
           <div className="row justify-content-center">
             <div className="col-md-8 col-lg-6">
-              <form
-                className="bg-white shadow-sm rounded-4 p-3"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <div className="d-flex gap-2">
-                  {/* Category Select */}
-                  <select
-                    className="form-select border-0 rounded-3 text-dark fw-semibold"
-                    style={{
-                      backgroundColor: "#f1f1f1",
-                      maxWidth: "150px",
-                    }}
-                    onChange={(e)=>setCategory(e.target.value)}
-                  >
-                    <option value="All">All</option>
-                    <option value="Biryani">Biryani</option>
-                    <option value="Burger">Burger</option>
-                    <option value="Cake">Cake</option>
-                    <option value="Ice cream">Ice Cream</option>
-                    <option value="Pizza">Pizza</option>
-                    <option value="Rolls">Rolls</option>
-                    <option value="Salad">Salad</option>
-                  </select>
-
-                  {/* Search Input */}
-                  <input
-                    type="text"
-                    className="form-control border-0 bg-light rounded-3"
-                    placeholder="Search food..."
-                    style={{
-                      fontSize: "0.95rem",
-                    }}
-                    onChange={(e) => setSearchText(e.target.value)}
-                    value={searchText}
-                  />
-
-                  {/* Button */}
-                  <button
-                    className="btn rounded-3 fw-semibold px-4"
-                    type="submit"
-                    style={{
-                      backgroundColor: "#212529",
-                      color: "#fff",
-                      transition: "0.3s",
-                    }}
-                    onMouseOver={(e) =>
-                      (e.currentTarget.style.backgroundColor = "#ff7b00")
-                    }
-                    onMouseOut={(e) =>
-                      (e.currentTarget.style.backgroundColor = "#212529")
-                    }
-                  >
-                    <i className="bi bi-search"></i>
-                  </button>
-                </div>
-              </form>
+              <div className="input-group shadow-sm rounded-pill overflow-hidden">
+                <input
+                  type="text"
+                  className="form-control border-0 px-4"
+                  placeholder="Search food..."
+                  style={{ height: "50px", fontSize: "1rem" }}
+                  value={searchText}
+                  onChange={(e) => setSearchText(e.target.value)}
+                />
+                <button
+                  className="btn btn-primary d-flex align-items-center justify-content-center"
+                  style={{
+                    width: "50px",
+                    borderRadius: 0,
+                    background: "linear-gradient(90deg, #ff7b00, #ffb347)",
+                    border: "none",
+                  }}
+                >
+                  <i className="bi bi-search text-white"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Yemek Kartları */}
-      <div className="mt-4">
-        <FoodDisplay category={category} searchText= {searchText} />
+      <div className="mt-5">
+        <FoodDisplay category={category} searchText={searchText} />
       </div>
     </>
   );

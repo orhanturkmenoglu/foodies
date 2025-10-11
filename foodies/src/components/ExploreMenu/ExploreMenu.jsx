@@ -4,6 +4,7 @@ import "../ExploreMenu/ExploreMenu.css";
 
 const ExploreMenu = ({ category, setCategory }) => {
   const menuRef = useRef(null);
+  console.log("category",category);
 
   const scrollLeft = () => {
     if (menuRef.current) {
